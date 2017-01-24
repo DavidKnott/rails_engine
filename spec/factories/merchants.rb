@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :merchant do
-    name "David"
+    sequence :name do |n|
+      "David#{n}"
+    end
   end
 end
