@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "Merchant Find Api" do
   it "returns a single merchant matching the given attribute" do
     create(:merchant, name: "John")
-    create_list(:merchant, 10, name: "Doe")
+    create_list(:merchant, 10)
 
     get "/api/v1/merchants/find?name=john"
 
