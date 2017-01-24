@@ -2,18 +2,36 @@ require 'rails_helper'
 
 describe "Merchant Relations API" do
   it "returns all items for a given merchant" do
-    create_list(:merchant_with_items, 5)
+    merchant = create_list(:merchant_with_items, 3, items_count: 3).first
 
-    get "/api/v1/merchants/3/items"
+    get "/api/v1/merchants/#{merchant.id}/items"
     items = JSON.parse(response.body)
     item = items.first
 
     expect(response).to be_success
-    expect(items.count).to eq 6
-    items.each_with_index do |item, i|
+    expect(items.count).to eq 3
+    items.each do |item|
       expect(item).to have_key "description"
       expect(item).to have_key "unit_price"
-      expect(item["merchant"]["id"]).to eq 3
+      expect(item["merchant"]["id"]).to eq merchant.id
+    end
+  end
+
+  it "returns all invoices for a given merchant" do
+    merchant = create_list(:merchant_with_items, 3, items_count: 3).first
+    invoices = create_list(:invoice, 4)
+    item = merchant.items.first
+    merchant.items.first.invoice_items.create(invoice_id: invoices.first.id, item_id: item.id, quantity: 2, unit_price: 10)
+    get "/api/v1/merchants/#{merchant.id}/invoices"
+
+    invoices = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(invoices.count).to eq 4
+    invoices.each do |invoice|
+      expect(invoice).to have_key "status"
+      byebug
+      expect(invoice["items"])
     end
   end
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Random Merchant API" do
   it "returns a random merchant" do
-    create_list(:merchant, 20)
+    create_list(:merchant, 3)
 
     get "/api/v1/merchants/random"
 
