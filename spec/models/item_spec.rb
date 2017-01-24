@@ -44,4 +44,10 @@ describe Item do
 
     expect(item).to be_invalid
   end
+
+  context "associations" do
+    it { is_expected.to belong_to(:merchant) }
+    it { is_expected.to have_many(:invoice_items) }
+    it { is_expected.to have_many(:ivoices) }
+  end
 end

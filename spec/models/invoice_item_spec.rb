@@ -53,4 +53,9 @@ describe InvoiceItem do
 
     expect(item).to be_invalid
   end
+
+  context "associations" do
+    it { is_expected.to belong_to(:item) }
+    it { is_expected.to belong_to(:invoice) }
+  end
 end

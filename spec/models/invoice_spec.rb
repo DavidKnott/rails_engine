@@ -25,4 +25,11 @@ describe Invoice do
 
     expect(invoice).to be_invalid
   end
+
+  context "associations" do
+    it { is_expected.to belong_to(:customer) }
+    it { is_expected.to have_many(:invoice_items) }
+    it { is_expected.to have_many(:items) }
+    it { is_expected.to belong_to(:transaction) }
+  end
 end
