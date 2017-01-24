@@ -31,7 +31,7 @@ describe "Transactions API" do
     expect(response).to be_success
     expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
-    expect(transaction["credit_card_number"]).to have_key expected_card_number
+    expect(transaction["credit_card_number"]).to eq expected_card_number
     expect(transaction).to have_key "result"
     expect(transaction).to have_key "invoice_id"
   end
