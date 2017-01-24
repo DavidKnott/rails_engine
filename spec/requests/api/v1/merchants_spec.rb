@@ -25,11 +25,12 @@ describe "Merchants API" do
     get "/api/v1/merchants/2"
 
     merchant = JSON.parse(response.body)
+    expected_name = Merchant.find(2).name
 
-    expect(repsonse).to be_success
+    expect(response).to be_success
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
-    expect(merchant["name"]).to eq "David2"
+    expect(merchant["name"]).to eq expected_name
     expect(merchant).to have_key "created_at"
     expect(merchant).to have_key "updated_at"
   end
