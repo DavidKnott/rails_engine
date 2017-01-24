@@ -9,6 +9,7 @@ describe Item do
   end
 
   scenario 'is valid when all fields are present' do
+    merchant = create(:merchant)
     item = merchant.items.create(name: "Tshirt",
                                  description: "White short-sleeves",
                                  unit_price: 100)
@@ -17,6 +18,7 @@ describe Item do
   end
 
   scenario 'is invalid when name is blank' do
+    merchant = create(:merchant)
     item = merchant.items.create(description: "White short-sleeves",
                                  unit_price: 100)
 
@@ -24,6 +26,7 @@ describe Item do
   end
 
   scenario 'is invalid when description is blank' do
+    merchant = create(:merchant)
     item = merchant.items.create(name: "Tshirt",
                                  unit_price: 100)
 
@@ -31,6 +34,7 @@ describe Item do
   end
 
   scenario 'is invalid when unit price is blank' do
+    merchant = create(:merchant)
     item = merchant.items.create(name: "Tshirt",
                                  description: "White short-sleeves")
 
@@ -48,6 +52,6 @@ describe Item do
   context "associations" do
     it { is_expected.to belong_to(:merchant) }
     it { is_expected.to have_many(:invoice_items) }
-    it { is_expected.to have_many(:ivoices) }
+    it { is_expected.to have_many(:invoices) }
   end
 end

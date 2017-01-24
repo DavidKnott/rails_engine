@@ -6,7 +6,6 @@ describe InvoiceItem do
     it { is_expected.to validate_presence_of(:invoice) }
     it { is_expected.to validate_presence_of(:quantity) }
     it { is_expected.to validate_presence_of(:unit_price) }
-    it { should validate_uniqueness_of(:item).scoped_to(:invoice) }
   end
 
   scenario 'is valid when all fields are present' do
@@ -15,8 +14,7 @@ describe InvoiceItem do
     invoice_item = item.invoice_items.create(invoice: invoice,
                                              quantity: 2,
                                              unit_price: 100)
-
-    expect(item).to be_valid
+    expect(invoice_item).to be_valid
   end
 
   scenario 'is invalid when item is blank' do
@@ -25,7 +23,7 @@ describe InvoiceItem do
                                        quantity: 2,
                                        unit_price: 100)
 
-    expect(item).to be_invalid
+    expect(invoice_item).to be_invalid
   end
 
   scenario 'is invalid when invoice is blank' do
@@ -33,7 +31,7 @@ describe InvoiceItem do
     invoice_item = item.invoice_items.create(quantity: 2,
                                              unit_price: 100)
 
-    expect(item).to be_invalid
+    expect(invoice_item).to be_invalid
   end
 
   scenario 'is invalid when quantity is blank' do
@@ -42,7 +40,7 @@ describe InvoiceItem do
     invoice_item = item.invoice_items.create(invoice: invoice,
                                              unit_price: 100)
 
-    expect(item).to be_invalid
+    expect(invoice_item).to be_invalid
   end
 
   scenario 'is invalid when unit_price is blank' do
@@ -51,7 +49,7 @@ describe InvoiceItem do
     invoice_item = item.invoice_items.create(invoice: invoice,
                                               quantity: 2)
 
-    expect(item).to be_invalid
+    expect(invoice_item).to be_invalid
   end
 
   context "associations" do
