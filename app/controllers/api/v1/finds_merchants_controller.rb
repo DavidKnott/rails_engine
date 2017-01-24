@@ -1,4 +1,4 @@
-class Api::V1::FindMerchantsController < ApplicationController
+class Api::V1::FindsMerchantsController < ApplicationController
 
   # scope :ci_find, lambda { |attr, val| where("lower(#attr}) =?", value.downcase).first}
 

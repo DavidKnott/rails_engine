@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "/merchants/find_all", to: "finds_merchants#index"
       resources :merchants, only: [:index, :show]
       get "/customers/find", to: "finds_customers#show"
+      get "/customers/find_all", to: "finds_customers#index"
       resources :customers, only: [:index, :show]
       resources :transactions, only: [:index, :show]
     end
