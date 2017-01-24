@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get "/customers/find", to: "finds_customers#show"
       get "/customers/find_all", to: "finds_customers#index"
       resources :customers, only: [:index, :show]
+      get "/transactions/random", to: "random_transactions#show"
       get "/transactions/find", to: "finds_transactions#show"
       get "/transactions/find_all", to: "finds_transactions#index"
       resources :transactions, only: [:index, :show]
