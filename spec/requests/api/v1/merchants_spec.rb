@@ -18,4 +18,20 @@ describe "Merchants API" do
     expect(merchant).to have_key "created_at"
     expect(merchant).to have_key "updated_at"
   end
+
+  it "returns a single merchant" do
+    create_list(:merchant, 3)
+
+    get "/api/v1/merchants/2"
+
+    merchant = JSON.parse(response.body)
+    expected_name = Merchant.find(2).name
+
+    expect(response).to be_success
+    expect(merchant).to have_key "id"
+    expect(merchant).to have_key "name"
+    expect(merchant["name"]).to eq expected_name
+    expect(merchant).to have_key "created_at"
+    expect(merchant).to have_key "updated_at"
+  end
 end
