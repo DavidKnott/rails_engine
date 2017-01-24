@@ -10,12 +10,12 @@ describe "Customer API" do
     customer = customers.first
 
     expect(response).to be_success
-    expect(merchants.count).to eq 3
-    expect(merchant).to have_key "id"
-    expect(merchant).to have_key "first_name"
-    expect(merhcant).to have_key "last_name"
-    expect(merchant["last_name"]).to be_a String
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
+    expect(customers.count).to eq 3
+    expect(customer).to have_key "id"
+    expect(customer).to have_key "first_name"
+    expect(customer).to have_key "last_name"
+    expect(customer["last_name"]).to be_a String
+    expect(customer).to have_key "created_at"
+    expect(customer).to have_key "updated_at"
   end
 end
