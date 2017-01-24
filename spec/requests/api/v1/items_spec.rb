@@ -24,4 +24,16 @@ describe "Items API" do
       expect(items_json[i]["unit_price"]).to eql(item.unit_price)
     end
   end
+
+  it "returns one item" do
+    item = create(:item)
+    get "/api/v1/items/#{item.id}"
+    item_json = JSON.parse(response.body)
+    item = Item.first
+
+    expect(item_json).to be_a(Hash)
+    expect(item_json["name"]).to eql(item.name)
+    expect(item_json["description"]).to eql(item.description)
+    expect(item_json["unit_price"]).to eql(item.unit_price)
+  end
 end

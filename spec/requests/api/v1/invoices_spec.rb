@@ -23,4 +23,15 @@ describe "Invoices API" do
       expect(invoices_json[i]["status"]).to eql(invoice.status)
     end
   end
+
+  it "returns one invoice" do
+    invoice = create(:invoice)
+    get "/api/v1/invoices/#{invoice.id}"
+    invoice_json = JSON.parse(response.body)
+    invoice = Invoice.first
+
+    expect(invoice_json).to be_a(Hash)
+    expect(invoice_json["customer_id"]).to eql(invoice.customer.id)
+    expect(invoice_json["status"]).to eql(invoice.status)
+  end
 end

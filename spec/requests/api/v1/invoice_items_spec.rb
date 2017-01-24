@@ -27,4 +27,17 @@ describe "Invoice Items API" do
       expect(invoice_items_json[i]["unit_price"]).to eql(invoice_item.unit_price)
     end
   end
+
+  it "returns one invoice item" do
+    invoice_item = create(:invoice_item)
+    get "/api/v1/invoice_items/#{invoice_item.id}"
+    invoice_item_json = JSON.parse(response.body)
+    invoice_item = InvoiceItem.first
+
+    expect(invoice_item_json).to be_a(Hash)
+    expect(invoice_item_json["item_id"]).to eql(invoice_item.item.id)
+    expect(invoice_item_json["invoice_id"]).to eql(invoice_item.invoice.id)
+    expect(invoice_item_json["quantity"]).to eql(invoice_item.quantity)
+    expect(invoice_item_json["unit_price"]).to eql(invoice_item.unit_price)
+  end
 end
