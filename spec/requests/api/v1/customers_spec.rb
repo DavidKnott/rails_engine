@@ -22,7 +22,7 @@ describe "Customer API" do
   it "returns a single merchant" do
     create_list(:customer, 3)
 
-    get "/api/v1/cusomers/2"
+    get "/api/v1/customers/2"
 
     customer = JSON.parse(response.body)
     expected_last_name = Customer.find(2).last_name
