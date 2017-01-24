@@ -5,7 +5,7 @@ describe "Finds Transactions API" do
     create(:transaction, credit_card_number: 12345)
     create_list(:transaction, 10)
 
-    get "api/v1/transactions/find?credit_card_number=12345"
+    get "/api/v1/transactions/find?credit_card_number=12345"
 
     transaction = JSON.parse(response.body)
     expected_card_number = Transaction.find_by(credit_card_number: 12345).credit_card_number

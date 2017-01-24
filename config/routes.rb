@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get "/customers/find", to: "finds_customers#show"
       get "/customers/find_all", to: "finds_customers#index"
       resources :customers, only: [:index, :show]
+      get "/transactions/find", to: "finds_transactions#show"
       resources :transactions, only: [:index, :show]
     end
   end
