@@ -12,7 +12,7 @@ describe "Random Merchant API" do
     expect(merchant).to be_a Hash
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
-    expect(merchant).to have_key "create_at"
-    expect(merchant).to have_key "updated_ay"
+    expect(merchant).to have_key "created_at"
+    expect(merchant).to have_key "updated_at"
   end
 end
