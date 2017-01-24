@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "Merchant Search Api" do
-  it "returns a single merchant matching the given atrribute" do
+describe "Merchant Find Api" do
+  it "returns a single merchant matching the given attribute" do
     create(:merchant, name: "John")
     create_list(:merchant, 10, name: "Doe")
 
