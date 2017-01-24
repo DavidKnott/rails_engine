@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Customer API" do
+describe "Customers API" do
   it "returns all customers" do
     create_list(:customer, 3)
 
