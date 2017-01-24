@@ -1,7 +1,7 @@
 class Api::V1::FindsTransactionsController < ApplicationController
 
   def show
-    render json: Transaction.where(find_params).first
+    render json: Transaction.find_by(find_params)
   end
 
 

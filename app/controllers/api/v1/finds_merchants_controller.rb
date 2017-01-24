@@ -1,14 +1,11 @@
 class Api::V1::FindsMerchantsController < ApplicationController
 
-  # scope :ci_find, lambda { |attr, val| where("lower(#attr}) =?", value.downcase).first}
-
   def show
-    byebug
-    render json: Merchant.ci_find(find_params)
+    render json: Merchant.find_by(find_params)
   end
 
   def index
-    render json: Merchant.ci_find_all(find_params)
+    render json: Merchant.where(find_params)
   end
 
   private
