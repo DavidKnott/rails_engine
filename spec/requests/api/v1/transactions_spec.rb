@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Transaction API" do
+describe "Transactions API" do
   it "returns a list of all merchants" do
     create_list(:transaction, 3)
 
