@@ -4,6 +4,9 @@ class Api::V1::FindsTransactionsController < ApplicationController
     render json: Transaction.find_by(find_params)
   end
 
+  def index
+    render json: Transaction.where(find_params)
+  end
 
   private
   def find_params
