@@ -6,6 +6,10 @@ class Api::V1::FindMerchantsController < ApplicationController
     render json: Merchant.ci_find(find_params)
   end
 
+  def index
+    render json: Merchant.ci_find_all(find_params)
+  end
+
   private
 
   def find_params
