@@ -22,11 +22,11 @@ describe "Customer Relations API" do
 
     transactions = JSON.parse(response.body)
     transaction = transactions.first
+    invoice = Invoice.find(transaction["invoice_id"])
 
     expect(response).to be_success
     expect(transactions.count).to eq 4
     expect(transaction).to have_key "credit_card_number"
-    byebug
-    expect(transaction).to eq customer.id
+    expect(invoice.customer).to eq customer
   end
 end

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       end
       resources :customers, only: [:index, :show] do
         resources :invoices, only: [:index], :controller => "customer_invoices"
+        resources :transactions, only: [:index], :controller => "customer_transactions"
       end
       namespace :transactions do
         get "/random", to: "random_transactions#show"
