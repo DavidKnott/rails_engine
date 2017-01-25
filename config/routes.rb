@@ -19,6 +19,22 @@ Rails.application.routes.draw do
         resources :invoices, only: [:index], :controller => "customer_invoices"
         resources :transactions, only: [:index], :controller => "customer_transactions"
       end
+      
+      resources :customers, only: [:index, :show]
+      get "/items/random", to: "random_items#show"
+      get "/items/find", to: "finds_items#show"
+      get "/items/find_all", to: "finds_items#index"
+      resources :items, only: [:index, :show]
+
+      get "/invoices/random", to: "random_invoices#show"
+      get "/invoices/find", to: "finds_invoices#show"
+      get "/invoices/find_all", to: "finds_invoices#index"
+      resources :invoices, only: [:index, :show]
+
+      get "/invoice_items/random", to: "random_invoice_items#show"
+      get "/invoice_items/find", to: "finds_invoice_items#show"
+      get "/invoice_items/find_all", to: "finds_invoice_items#index"
+      resources :invoice_items, only: [:index, :show]
       namespace :transactions do
         get "/random", to: "random_transactions#show"
         get "/find", to: "finds_transactions#show"
@@ -27,10 +43,6 @@ Rails.application.routes.draw do
       resources :transactions, only: [:index, :show] do
         resource :invoice, only: [:show], :controller => "transaction_invoices"
       end
-      get "/items/find", to: "finds_items#show"
-      resources :items, only: [:index, :show]
-      resources :invoices, only: [:index, :show]
-      resources :invoice_items, only: [:index, :show]
     end
   end
 end
