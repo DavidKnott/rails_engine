@@ -15,8 +15,6 @@ describe "Merchants API" do
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
     expect(merchant["name"]).to be_a String
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
   end
 
   it "returns a single merchant" do
@@ -31,7 +29,5 @@ describe "Merchants API" do
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
     expect(merchant["name"]).to eq expected_name
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
   end
 end

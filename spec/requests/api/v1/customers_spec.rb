@@ -15,8 +15,6 @@ describe "Customers API" do
     expect(customer).to have_key "first_name"
     expect(customer).to have_key "last_name"
     expect(customer["last_name"]).to be_a String
-    expect(customer).to have_key "created_at"
-    expect(customer).to have_key "updated_at"
   end
 
   it "returns a single merchant" do
@@ -32,8 +30,5 @@ describe "Customers API" do
     expect(customer).to have_key "first_name"
     expect(customer).to have_key "last_name"
     expect(customer["last_name"]).to eq expected_last_name
-    expect(customer).to have_key "created_at"
-    expect(customer).to have_key "updated_at"
-
   end
 end

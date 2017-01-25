@@ -7,8 +7,8 @@ Rails.application.routes.draw do
         get "/find_all", to: "finds_merchants#index"
       end
       resources :merchants, only: [:index, :show] do
-        resources :items, only: [:index], :controller => "merchant_items"
-        resources :invoices, only: [:index], :controller => "merchant_invoices"
+        resources :items, only: [:index], :controller => "merchants/merchant_items"
+        resources :invoices, only: [:index], :controller => "merchants/merchant_invoices"
       end
       namespace :customers do
         get "/random", to: "random_customers#show"
@@ -16,8 +16,8 @@ Rails.application.routes.draw do
         get "/find_all", to: "finds_customers#index"
       end
       resources :customers, only: [:index, :show] do
-        resources :invoices, only: [:index], :controller => "customer_invoices"
-        resources :transactions, only: [:index], :controller => "customer_transactions"
+        resources :invoices, only: [:index], :controller => "customers/customer_invoices"
+        resources :transactions, only: [:index], :controller => "customers/customer_transactions"
       end
       resources :customers, only: [:index, :show]
       namespace :items do
@@ -26,8 +26,8 @@ Rails.application.routes.draw do
         get "/find_all", to: "finds_items#index"
       end
       resources :items, only: [:index, :show] do
-        resources :invoice_items, only: [:index], :controller => "item_invoice_items"
-        resource :merchant, only: [:show], :controller => "item_merchants"
+        resources :invoice_items, only: [:index], :controller => "items/item_invoice_items"
+        resource :merchant, only: [:show], :controller => "items/item_merchants"
       end
       namespace :invoices do
         get "/random", to: "random_invoices#show"
@@ -47,7 +47,7 @@ Rails.application.routes.draw do
         get "/find_all", to: "finds_transactions#index"
       end
       resources :transactions, only: [:index, :show] do
-        resource :invoice, only: [:show], :controller => "transaction_invoices"
+        resource :invoice, only: [:show], :controller => "transactions/transaction_invoices"
       end
     end
   end

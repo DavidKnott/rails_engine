@@ -14,8 +14,5 @@ FactoryGirl.define do
       end
     end
 
-    factory :merchants_with_invoices do
-      
-    end
   end
 end

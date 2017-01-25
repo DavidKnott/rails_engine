@@ -3,6 +3,9 @@ require 'rails_helper'
 describe "Transaction Relations API" do
   it "returns the invoice for a given transaction" do
     transaction = create_list(:invoice_with_transactions, 3, transactions_count: 4).first.transactions.first
+    merchant = create(:merchant_with_items)
+    item = merchant.items.first
+    create(:invoice_item, item_id: item.id, invoice_id: transaction.invoice.id)
 
     get "/api/v1/transactions/#{transaction.id}/invoice"
 

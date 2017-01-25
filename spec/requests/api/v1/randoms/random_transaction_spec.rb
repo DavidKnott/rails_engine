@@ -13,7 +13,5 @@ describe "Random Transaction API" do
     expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
     expect(transaction).to have_key "result"
-    expect(transaction).to have_key "created_at"
-    expect(transaction).to have_key "updated_at"
   end
 end

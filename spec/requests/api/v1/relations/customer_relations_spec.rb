@@ -1,8 +1,12 @@
 require 'rails_helper'
 
 describe "Customer Relations API" do
+
   it "returns all invoices for a given customer" do
     customer = create_list(:customer_with_invoices, 3, invoices_count: 4).first
+    merchant = create(:merchant_with_items)
+    item = merchant.items.first
+    create(:invoice_item, item_id: item.id, invoice_id: customer.invoices.first.id)
 
     get "/api/v1/customers/#{customer.id}/invoices"
 

@@ -12,7 +12,5 @@ describe "Random Customer API" do
     expect(customer).to be_a Hash
     expect(customer).to have_key "first_name"
     expect(customer).to have_key "last_name"
-    expect(customer).to have_key "created_at"
-    expect(customer).to have_key "updated_at"
   end
 end
