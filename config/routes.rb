@@ -20,20 +20,26 @@ Rails.application.routes.draw do
         resources :transactions, only: [:index], :controller => "customer_transactions"
       end
       resources :customers, only: [:index, :show]
-      get "/items/random", to: "random_items#show"
-      get "/items/find", to: "finds_items#show"
-      get "/items/find_all", to: "finds_items#index"
+      namespace :items do
+        get "/random", to: "random_items#show"
+        get "/find", to: "finds_items#show"
+        get "/find_all", to: "finds_items#index"
+      end
       resources :items, only: [:index, :show] do
         resources :invoice_items, only: [:index], :controller => "item_invoice_items"
         resource :merchant, only: [:show], :controller => "item_merchants"
       end
-      get "/invoices/random", to: "random_invoices#show"
-      get "/invoices/find", to: "finds_invoices#show"
-      get "/invoices/find_all", to: "finds_invoices#index"
+      namespace :invoices do
+        get "/random", to: "random_invoices#show"
+        get "/find", to: "finds_invoices#show"
+        get "/find_all", to: "finds_invoices#index"
+      end
       resources :invoices, only: [:index, :show]
-      get "/invoice_items/random", to: "random_invoice_items#show"
-      get "/invoice_items/find", to: "finds_invoice_items#show"
-      get "/invoice_items/find_all", to: "finds_invoice_items#index"
+      namespace :invoice_items do
+        get "/random", to: "random_invoice_items#show"
+        get "/find", to: "finds_invoice_items#show"
+        get "/find_all", to: "finds_invoice_items#index"
+      end
       resources :invoice_items, only: [:index, :show]
       namespace :transactions do
         get "/random", to: "random_transactions#show"

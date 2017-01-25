@@ -24,7 +24,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -35,7 +35,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -46,7 +46,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -57,7 +57,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -68,7 +68,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -79,7 +79,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -90,7 +90,7 @@ describe "Finds Items API" do
     expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
-    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -101,7 +101,7 @@ describe "Finds Items API" do
     expect(item_json[0]["id"]).to eql(@item_1.id)
     expect(item_json[0]["name"]).to eql("Pants")
     expect(item_json[0]["description"]).to eql("Blue jeans")
-    expect(item_json[0]["unit_price"]).to eql(100)
+    expect(item_json[0]["unit_price"]).to eql("1.00")
     expect(item_json[0]["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
@@ -113,7 +113,7 @@ describe "Finds Items API" do
     2.times do |i|
       expect(item_json[i]["name"]).to eql("Pants")
       expect(item_json[i]["description"]).to eql("Blue jeans")
-      expect(item_json[i]["unit_price"]).to eql(100)
+      expect(item_json[i]["unit_price"]).to eql("1.00")
       expect(item_json[i]["merchant_id"]).to eql(@item_1.merchant.id)
     end
   end
