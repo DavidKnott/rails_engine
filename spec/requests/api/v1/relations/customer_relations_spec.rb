@@ -12,7 +12,6 @@ describe "Customer Relations API" do
     expect(response).to be_success
     expect(invoices.count).to eq 4
     expect(invoice).to have_key "status"
-    byebug
-    exepect(invoice).to eq cusomer.id
+    expect(invoice["customer_id"]).to eq customer.id
   end
 end
