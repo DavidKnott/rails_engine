@@ -81,16 +81,14 @@ describe "Invoice Relations API" do
     get "/api/v1/invoices/#{@invoice_1.id}/customer"
     customer_json = JSON.parse(response.body)
 
-    expect(customer_json.count).to eql(1)
     expect(customer_json["first_name"]).to eql("Jane")
     expect(customer_json["last_name"]).to eql("Doe")
   end
 
-  xit "returns the associated merchant" do
+  it "returns the associated merchant" do
     get "/api/v1/invoices/#{@invoice_1.id}/merchant"
     merchant_json = JSON.parse(response.body)
 
-    expect(merchant_json.count).to eql(1)
     expect(merchant_json["name"]).to eql("Best Store Ever")
   end
 end
