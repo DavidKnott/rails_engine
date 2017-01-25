@@ -21,7 +21,9 @@ Rails.application.routes.draw do
         get "/find", to: "finds_transactions#show"
         get "/find_all", to: "finds_transactions#index"
       end
-      resources :transactions, only: [:index, :show]
+      resources :transactions, only: [:index, :show] do
+        resource :invoice, only: [:show], :controller => "transaction_invoices"
+      end
       get "/items/find", to: "finds_items#show"
       resources :items, only: [:index, :show]
       resources :invoices, only: [:index, :show]
