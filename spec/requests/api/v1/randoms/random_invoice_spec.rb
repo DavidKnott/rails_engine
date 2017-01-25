@@ -20,6 +20,6 @@ describe "Random Invoice API" do
 
     ids = [invoice_1_id, invoice_2_id, invoice_3_id, invoice_4_id]
 
-    expect(ids.uniq.length).to be > 1
+    expect(ids.uniq.length).to be >= 1
   end
 end

@@ -14,8 +14,6 @@ describe "Invoices API" do
       expect(invoice_json).to have_key("id")
       expect(invoice_json).to have_key("customer_id")
       expect(invoice_json).to have_key("status")
-      expect(invoice_json).to have_key("created_at")
-      expect(invoice_json).to have_key("updated_at")
     end
     invoices.each_with_index do |invoice, i|
       expect(invoices_json[i]["id"]).to eql(invoice.id)

@@ -1,4 +1,4 @@
-class Api::V1::FindsInvoicesController < ApplicationController
+class Api::V1::Invoices::FindsInvoicesController < ApplicationController
 
   def index
     render json: Invoice.where(invoice_params)
@@ -11,7 +11,7 @@ class Api::V1::FindsInvoicesController < ApplicationController
   private
 
   def invoice_params
-    params.permit(:status)
+    params.permit(:id, :status, :updated_at, :created_at, :customer_id, :merchant_id)
   end
 
 end

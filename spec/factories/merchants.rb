@@ -4,10 +4,15 @@ FactoryGirl.define do
       "David#{n}"
     end
 
+    transient do
+      items_count 3
+    end
+
     factory :merchant_with_items do
-      after(:create) do |merchant|
-        create_list(:item, 6, merchant: merchant)
+      after(:create) do |merchant, evaluator|
+        create_list(:item, evaluator.items_count, merchant: merchant)
       end
     end
+
   end
 end

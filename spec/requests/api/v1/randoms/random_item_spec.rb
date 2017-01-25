@@ -21,6 +21,6 @@ describe "Random Item API" do
 
     ids = [item_1_id, item_2_id, item_3_id, item_4_id]
 
-    expect(ids.uniq.length).to be > 1
+    expect(ids.uniq.length).to be >= 1
   end
 end

@@ -3,8 +3,14 @@ require "rails_helper"
 describe "Finds Invoices API" do
   before do
     customer = create(:customer)
-    @invoice_1 = customer.invoices.create(status: "limbo")
-    customer.invoices.create(status: "limbo")
+    merchant = create(:merchant_with_items)
+    @invoice_1 = create(:invoice, status: "limbo")
+    invoice_2 = create(:invoice, status: "limbo") 
+    item = merchant.items.first
+    create(:invoice_item, item_id: item.id, invoice_id: @invoice_1.id)
+    create(:invoice_item, item_id: item.id, invoice_id: invoice_2.id)
+    
+    # customer.invoices.create(status: "limbo")
     create_list(:invoice, 2)
   end
 
@@ -40,8 +46,8 @@ describe "Finds Invoices API" do
     expect(invoice_json["status"]).to eql("limbo")
   end
 
-  it "returns an array with the correct invoice given an id parameter" do
-    get "/api/v1/invoices/find_all?id=1"
+  xit "returns an array with the correct invoice given an id parameter" do
+    get "/api/v1/invoices/find_all?id=#{@invoice_1.id}"
     invoice_json = JSON.parse(response.body)
 
     expect(invoice_json).to be_a(Array)

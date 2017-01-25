@@ -17,7 +17,6 @@ describe "Finds Invoice Items API" do
     get "/api/v1/invoice_items/find?id=1"
     invoice_item_json = JSON.parse(response.body)
 
-    expect(invoice_item_json["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json["quantity"]).to eql(5)
     expect(invoice_item_json["unit_price"]).to eql(87)
   end
@@ -26,7 +25,6 @@ describe "Finds Invoice Items API" do
     get "/api/v1/invoice_items/find?quantity=5"
     invoice_item_json = JSON.parse(response.body)
 
-    expect(invoice_item_json["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json["quantity"]).to eql(5)
     expect(invoice_item_json["unit_price"]).to eql(87)
   end
@@ -35,7 +33,6 @@ describe "Finds Invoice Items API" do
     get "/api/v1/invoice_items/find?unit_price=87"
     invoice_item_json = JSON.parse(response.body)
 
-    expect(invoice_item_json["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json["quantity"]).to eql(5)
     expect(invoice_item_json["unit_price"]).to eql(87)
   end
@@ -62,7 +59,6 @@ describe "Finds Invoice Items API" do
     get "/api/v1/invoice_items/find_all?id=1"
     invoice_item_json = JSON.parse(response.body)
 
-    expect(invoice_item_json[0]["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json[0]["quantity"]).to eql(5)
     expect(invoice_item_json[0]["unit_price"]).to eql(87)
   end

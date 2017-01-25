@@ -25,11 +25,11 @@ describe "Invoice Relations API" do
     invoice_2 = @customer_1.invoices.create!(status: "limbo")
 
     #create transactions for those invoices
-    @invoice_1.transactions.create!(credit_card_number: 1111222233334444,
+    @invoice_1.transactions.create!(credit_card_number: "1111222233334444",
                                     result: "done")
-    @invoice_1.transactions.create!(credit_card_number: 1111222233334444,
+    @invoice_1.transactions.create!(credit_card_number: "1111222233334444",
                                     result: "done")
-    invoice_2.transactions.create!(credit_card_number: 4444333322221111,
+    invoice_2.transactions.create!(credit_card_number: "4444333322221111",
                                   result: "success")
 
     #create an invoice_item for each item, assign them to the first invoice

@@ -14,8 +14,6 @@ describe "Finds Merchants  Api" do
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
     expect(merchant["name"]).to eq expected_name
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
   end
 
   it "returns all merchants matching the given attribute" do
@@ -33,7 +31,5 @@ describe "Finds Merchants  Api" do
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
     expect(merchant["name"]).to eq expected_name
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
   end
 end

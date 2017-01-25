@@ -8,12 +8,13 @@ InvoiceItem.destroy_all
 Transaction.destroy_all
 
 
-CSV.foreach("./db/data/customers.csv", :headers => true) do |row|
-  Customer.create(row.to_h)
-end
 
 CSV.foreach("./db/data/merchants.csv", :headers => true) do |row|
-  Merchant.create(row.to_h)
+  Merchant.create!(row.to_h)
+end
+
+CSV.foreach("./db/data/customers.csv", :headers => true) do |row|
+  Customer.create!(row.to_h)
 end
 
 CSV.foreach("./db/data/items.csv", :headers => true) do |row|

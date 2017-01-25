@@ -11,12 +11,9 @@ describe "Finds Transactions API" do
     expected_card_number = Transaction.find_by(credit_card_number: 12345).credit_card_number
 
     expect(response).to be_success
-    expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
     expect(transaction["credit_card_number"]).to eq expected_card_number
     expect(transaction).to have_key "result"
-    expect(transaction).to have_key "created_at"
-    expect(transaction).to have_key "updated_at"
   end
 
   it "returns all transactions matching the given attributes" do
@@ -31,12 +28,9 @@ describe "Finds Transactions API" do
 
     expect(response).to be_succes
     expect(transactions.count).to eq 6 
-    expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
     expect(transaction["credit_card_number"]).to eq expected_card_number
     expect(transaction).to have_key "result"
     expect(transaction["result"]).to eq "failure"
-    expect(transaction).to have_key "created_at"
-    expect(transaction).to have_key "updated_at"
   end
 end
