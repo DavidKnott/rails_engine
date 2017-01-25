@@ -5,13 +5,14 @@ describe "Invoice Relations API" do
     #create a merchant
     @merchant_1 = Merchant.create!(name: "Best Store Ever")
 
-    #create some items for that merchant
+    #create some items for that merchant and one random item
     @item_1 = @merchant_1.items.create!(name: "Cool Tshirt",
                                       description: "The coolest tshirt ever",
                                       unit_price: 1000)
     @item_2 = @merchant_1.items.create!(name: "Pretty Cool Tshirt",
                                       description: "The second coolest tshirt ever",
                                       unit_price: 900)
+    create(:item)
 
     #create a couple customers
     @customer_1 = Customer.create!(first_name: "Jane",
@@ -38,6 +39,7 @@ describe "Invoice Relations API" do
     invoice_item_2 = @item_2.invoice_items.create!(invoice: @invoice_1,
                                                     quantity: 4,
                                                     unit_price: 900)
+    create(:invoice_item)
   end
 
   it "returns a collection of associated transactions" do
@@ -46,25 +48,36 @@ describe "Invoice Relations API" do
 
     expect(transactions_json.count).to eql(2)
     transactions_json.each do |transaction_json|
-      expect(transaction_json["credit_card_number"]).to eql(1111222233334444)
+      expect(transaction_json["credit_card_number"]).to eql("1111222233334444")
       expect(transaction_json["result"]).to eql("done")
     end
   end
 
-  xit "returns a collection of associated invoice items" do
+  it "returns a collection of associated invoice items" do
     get "/api/v1/invoices/#{@invoice_1.id}/invoice_items"
     invoice_items_json = JSON.parse(response.body)
 
-
+    expect(invoice_items_json.count).to eql(2)
+    expect(invoice_items_json[0]["quantity"]).to eql(7)
+    expect(invoice_items_json[0]["unit_price"]).to eql(1000)
+    expect(invoice_items_json[1]["quantity"]).to eql(4)
+    expect(invoice_items_json[1]["unit_price"]).to eql(900)
   end
 
-  xit "returns a collection of associated items" do
+  it "returns a collection of associated items" do
     get "/api/v1/invoices/#{@invoice_1.id}/items"
+    the_invoices_items_json = JSON.parse(response.body)
 
-
+    expect(the_invoices_items_json.count).to eql(2)
+    expect(the_invoices_items_json[0]["name"]).to eql("Cool Tshirt")
+    expect(the_invoices_items_json[0]["description"]).to eql("The coolest tshirt ever")
+    expect(the_invoices_items_json[0]["unit_price"]).to eql(1000)
+    expect(the_invoices_items_json[1]["name"]).to eql("Pretty Cool Tshirt")
+    expect(the_invoices_items_json[1]["description"]).to eql("The second coolest tshirt ever")
+    expect(the_invoices_items_json[1]["unit_price"]).to eql(900)
   end
 
-  xit "returns the associated customer" do
+  it "returns the associated customer" do
     get "/api/v1/invoices/#{@invoice_1.id}/customer"
     customer_json = JSON.parse(response.body)
 
