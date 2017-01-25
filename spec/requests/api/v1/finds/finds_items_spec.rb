@@ -61,6 +61,17 @@ describe "Finds Items API" do
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
+  it "returns the correct item given a merchant_id parameter" do
+    get "/api/v1/items/find?merchant_id=#{@item_1.merchant.id}"
+    item_json = JSON.parse(response.body)
+
+    expect(item_json["id"]).to eql(@item_1.id)
+    expect(item_json["name"]).to eql("Pants")
+    expect(item_json["description"]).to eql("Blue jeans")
+    expect(item_json["unit_price"]).to eql(100)
+    expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
+  end
+
   xit "returns the correct item given a created_at parameter" do
     get "/api/v1/items/find?created_at=#{@time}"
     item_json = JSON.parse(response.body)
