@@ -14,12 +14,15 @@ Rails.application.routes.draw do
       resources :customers, only: [:index, :show]
 
       get "/items/find", to: "finds_items#show"
+      get "/items/find_all", to: "finds_items#index"
       resources :items, only: [:index, :show]
 
       get "/invoices/find", to: "finds_invoices#show"
+      get "/invoices/find_all", to: "finds_invoices#index"
       resources :invoices, only: [:index, :show]
 
       get "/invoice_items/find", to: "finds_invoice_items#show"
+      get "/invoice_items/find_all", to: "finds_invoice_items#index"
       resources :invoice_items, only: [:index, :show]
 
       get "/transactions/random", to: "random_transactions#show"
