@@ -19,7 +19,6 @@ Rails.application.routes.draw do
         resources :invoices, only: [:index], :controller => "customers/customer_invoices"
         resources :transactions, only: [:index], :controller => "customers/customer_transactions"
       end
-      resources :customers, only: [:index, :show]
       namespace :items do
         get "/random", to: "random_items#show"
         get "/find", to: "finds_items#show"
@@ -34,12 +33,14 @@ Rails.application.routes.draw do
         get "/find", to: "finds_invoices#show"
         get "/find_all", to: "finds_invoices#index"
       end
-      resources :invoices, only: [:index, :show]
+      resources :items, only: [:index, :show]
+      get "/invoices/:id/transactions", to: "invoice_transactions#show"
       namespace :invoice_items do
         get "/random", to: "random_invoice_items#show"
         get "/find", to: "finds_invoice_items#show"
         get "/find_all", to: "finds_invoice_items#index"
       end
+      resources :invoices, only: [:index, :show]
       resources :invoice_items, only: [:index, :show]
       namespace :transactions do
         get "/random", to: "random_transactions#show"

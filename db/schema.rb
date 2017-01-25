@@ -61,11 +61,11 @@ ActiveRecord::Schema.define(version: 20170125214704) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer  "credit_card_number"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "invoice_id"
     t.citext   "result"
+    t.string   "credit_card_number"
     t.index ["invoice_id"], name: "index_transactions_on_invoice_id", using: :btree
   end
 
