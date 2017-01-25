@@ -18,7 +18,7 @@ describe "Item Relations API" do
   it "returns the merchant for a given item" do
     merchant1 = create_list(:merchant_with_items, 3, items_count: 4).first
 
-    get "/api/v1/#{merchant1.id}/merchant"
+    get "/api/v1/items/#{merchant1.id}/merchant"
 
     merchant2 = JSON.parse(response.body)
 
