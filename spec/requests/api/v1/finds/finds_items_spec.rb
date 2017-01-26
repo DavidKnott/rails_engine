@@ -3,12 +3,12 @@ require "rails_helper"
 describe "Finds Items API" do
   before do
     merchant = create(:merchant)
-    @time = Time.now.iso8601
+    @time = "2012-03-27T14:54:05.000Z"
     @item_1 = merchant.items.create!(name: "Pants",
                                     description: "Blue jeans",
                                     unit_price: 100,
-                                    created_at: @time,
-                                    updated_at: @time)
+                                    created_at: "2012-03-27 14:54:05 UTC",
+                                    updated_at: "2012-03-27 14:54:05 UTC")
     merchant.items.create!(name: "Pants",
                           description: "Blue jeans",
                           unit_price: 100,
@@ -65,14 +65,14 @@ describe "Finds Items API" do
     get "/api/v1/items/find?merchant_id=#{@item_1.merchant.id}"
     item_json = JSON.parse(response.body)
 
-    expect(item_json["id"]).to eql(2)
+    expect(item_json["id"]).to eql(@item_1.id)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
     expect(item_json["unit_price"]).to eql("1.00")
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
-  xit "returns the correct item given a created_at parameter" do
+  it "returns the correct item given a created_at parameter" do
     get "/api/v1/items/find?created_at=#{@time}"
     item_json = JSON.parse(response.body)
 
@@ -83,7 +83,7 @@ describe "Finds Items API" do
     expect(item_json["merchant_id"]).to eql(@item_1.merchant.id)
   end
 
-  xit "returns the correct item given an updated_at parameter" do
+  it "returns the correct item given an updated_at parameter" do
     get "/api/v1/items/find?updated_at=#{@time}"
     item_json = JSON.parse(response.body)
 
@@ -118,28 +118,28 @@ describe "Finds Items API" do
     end
   end
 
-  xit "returns all items with a specified created_at parameter" do
-    get "/api/v1/items/find_all?created_at=XXXX"
+  it "returns all items with a specified created_at parameter" do
+    get "/api/v1/items/find_all?created_at=#{@time}"
     item_json = JSON.parse(response.body)
 
     expect(item_json.length).to eql(2)
     2.times do |i|
       expect(item_json[i]["name"]).to eql("Pants")
       expect(item_json[i]["description"]).to eql("Blue jeans")
-      expect(item_json[i]["unit_price"]).to eql(100)
+      expect(item_json[i]["unit_price"]).to eql("1.00")
       expect(item_json[i]["merchant_id"]).to eql(@item_1.merchant.id)
     end
   end
 
-  xit "returns all items with a specified updated_at parameter" do
-    get "/api/v1/items/find_all?updated_at=XXXX"
+  it "returns all items with a specified updated_at parameter" do
+    get "/api/v1/items/find_all?updated_at=#{@time}"
     item_json = JSON.parse(response.body)
 
     expect(item_json.length).to eql(2)
     2.times do |i|
       expect(item_json[i]["name"]).to eql("Pants")
       expect(item_json[i]["description"]).to eql("Blue jeans")
-      expect(item_json[i]["unit_price"]).to eql(100)
+      expect(item_json[i]["unit_price"]).to eql("1.00")
       expect(item_json[i]["merchant_id"]).to eql(@item_1.merchant.id)
     end
   end
