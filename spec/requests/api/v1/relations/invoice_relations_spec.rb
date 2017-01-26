@@ -32,13 +32,14 @@ describe "Invoice Relations API" do
   end
 
   it "returns a collection of associated invoice items" do
-    invoice = create(:invoice_with_invoice_items, invoice_items_count: 2)
+    invoice = create_list(:invoice_with_invoice_items, 3, invoice_items_count: 2).first
     get "/api/v1/invoices/#{invoice.id}/invoice_items"
     invoice_items_json = JSON.parse(response.body)
 
     expect(invoice_items_json.count).to eql(2)
-    expect(invoice_items_json[0]["quantity"]).to eql(2)
-    expect(invoice_items_json[0]["unit_price"]).to eql("1.00")
+    expect(invoice_items_json[0]).to have_key "quantity"
+    expect(invoice_items_json[0]["invoice_id"]).to eql(invoice.id)
+    expect(invoice_items_json[1]["invoice_id"]).to eql(invoice.id)
   end
 
   it "returns a collection of associated items" do
@@ -59,12 +60,6 @@ describe "Invoice Relations API" do
     expect(the_invoices_items_json[0]["name"]).to eql("Cool Tshirt")
     expect(the_invoices_items_json[0]["description"]).to eql("The coolest tshirt ever")
     expect(the_invoices_items_json[0]["unit_price"]).to eql("10.00")
-<<<<<<< HEAD
-=======
-    expect(the_invoices_items_json[1]["name"]).to eql("Pretty Cool Tshirt")
-    expect(the_invoices_items_json[1]["description"]).to eql("The second coolest tshirt ever")
-    expect(the_invoices_items_json[1]["unit_price"]).to eql("9.00")
->>>>>>> fbe6f30f510cb99fe4ef84e1b8567fd26e53c2ee
   end
 
   it "returns the associated customer" do

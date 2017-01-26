@@ -6,7 +6,7 @@ class Api::V1::Items::FindsItemsController < ApplicationController
 
   def show
     adjusted_item_params = dollars_to_cents
-    render json: Item.where(adjusted_item_params)
+    render json: Item.find_by(adjusted_item_params)
   end
 
   private
