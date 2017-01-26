@@ -65,7 +65,7 @@ describe "Finds Items API" do
     get "/api/v1/items/find?merchant_id=#{@item_1.merchant.id}"
     item_json = JSON.parse(response.body)
 
-    expect(item_json["id"]).to eql(@item_1.id)
+    expect(item_json["id"]).to eql(2)
     expect(item_json["name"]).to eql("Pants")
     expect(item_json["description"]).to eql("Blue jeans")
     expect(item_json["unit_price"]).to eql("1.00")

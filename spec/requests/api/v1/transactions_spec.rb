@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Transactions API" do
-  it "returns a list of all merchants" do
+  it "returns a list of all transactions" do
     create_list(:transaction, 3)
 
     get "/api/v1/transactions"
@@ -17,7 +17,7 @@ describe "Transactions API" do
     expect(transaction).to have_key "invoice_id"
   end
   
-  it "returns a single merchant" do
+  it "returns a single transaction" do
     create_list(:transaction, 3)
 
     get "/api/v1/transactions/2"

@@ -28,20 +28,27 @@ Rails.application.routes.draw do
         resources :invoice_items, only: [:index], :controller => "items/item_invoice_items"
         resource :merchant, only: [:show], :controller => "items/item_merchants"
       end
+
       namespace :invoices do
         get "/random", to: "random_invoices#show"
         get "/find", to: "finds_invoices#show"
         get "/find_all", to: "finds_invoices#index"
       end
-      resources :items, only: [:index, :show]
-      get "/invoices/:id/transactions", to: "invoice_transactions#show"
+      resources :invoices, only: [:index, :show] do
+        resources :transactions, only: [:index], :controller => "invoices/invoice_transactions"
+        resources :invoice_items, only: [:index], :controller => "invoices/invoice_invoice_items"
+        resources :items, only: [:index], :controller => "invoices/invoice_items"
+        resource :customer, only: [:show], :controller => "invoices/invoice_customer"
+        resource :merchant, only: [:show], :controller => "invoices/invoice_merchant"
+      end
+
       namespace :invoice_items do
         get "/random", to: "random_invoice_items#show"
         get "/find", to: "finds_invoice_items#show"
         get "/find_all", to: "finds_invoice_items#index"
       end
-      resources :invoices, only: [:index, :show]
       resources :invoice_items, only: [:index, :show]
+
       namespace :transactions do
         get "/random", to: "random_transactions#show"
         get "/find", to: "finds_transactions#show"

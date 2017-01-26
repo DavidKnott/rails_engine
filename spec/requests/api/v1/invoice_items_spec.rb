@@ -20,7 +20,7 @@ describe "Invoice Items API" do
       expect(invoice_items_json[i]["item_id"]).to eql(invoice_item.item_id)
       expect(invoice_items_json[i]["invoice_id"]).to eql(invoice_item.invoice_id)
       expect(invoice_items_json[i]["quantity"]).to eql(invoice_item.quantity)
-      expect(invoice_items_json[i]["unit_price"]).to eql(invoice_item.unit_price)
+      expect(invoice_items_json[i]["unit_price"]).to eql("1.00")
     end
   end
 
@@ -34,6 +34,6 @@ describe "Invoice Items API" do
     expect(invoice_item_json["item_id"]).to eql(invoice_item.item.id)
     expect(invoice_item_json["invoice_id"]).to eql(invoice_item.invoice.id)
     expect(invoice_item_json["quantity"]).to eql(invoice_item.quantity)
-    expect(invoice_item_json["unit_price"]).to eql(invoice_item.unit_price)
+    expect(invoice_item_json["unit_price"]).to eql("1.00")
   end
 end

@@ -8,7 +8,8 @@ describe Invoice do
 
   scenario 'is valid when all fields are present' do
     customer = create(:customer)
-    invoice = customer.invoices.create(status: "shipped")
+    merchant = create(:merchant)
+    invoice = customer.invoices.create(status: "shipped", merchant_id: merchant.id)
 
     expect(invoice).to be_valid
   end
@@ -28,6 +29,7 @@ describe Invoice do
 
   context "associations" do
     it { is_expected.to belong_to(:customer) }
+    it { is_expected.to belong_to(:merchant)}
     it { is_expected.to have_many(:invoice_items) }
     it { is_expected.to have_many(:items) }
   end
