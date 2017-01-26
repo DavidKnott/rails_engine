@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Random Merchant API" do
   it "returns a random merchant" do
-    create_list(:merchant, 20)
+    create_list(:merchant, 3)
 
     get "/api/v1/merchants/random"
 
@@ -12,7 +12,5 @@ describe "Random Merchant API" do
     expect(merchant).to be_a Hash
     expect(merchant).to have_key "id"
     expect(merchant).to have_key "name"
-    expect(merchant).to have_key "created_at"
-    expect(merchant).to have_key "updated_at"
   end
 end

@@ -15,8 +15,6 @@ describe "Finds Customers API" do
     expect(customer).to have_key "first_name"
     expect(customer).to have_key "last_name"
     expect(customer["last_name"]).to eq expected_last_name
-    expect(customer).to have_key "created_at"
-    expect(customer).to have_key "updated_at"
   end
 
   it "returns all customers matching the given attribute" do
@@ -35,7 +33,5 @@ describe "Finds Customers API" do
     expect(customer).to have_key "first_name"
     expect(customer).to have_key "last_name"
     expect(customer["last_name"]).to eq expected_last_name
-    expect(customer).to have_key "created_at"
-    expect(customer).to have_key "updated_at"
   end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Transactions API" do
-  it "returns a list of all merchants" do
+  it "returns a list of all transactions" do
     create_list(:transaction, 3)
 
     get "/api/v1/transactions"
@@ -11,16 +11,13 @@ describe "Transactions API" do
 
     expect(response).to be_success
     expect(transactions.count).to eq 3
-    expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
     expect(transaction).to have_key "result"
     expect(transaction["result"]).to be_a String
     expect(transaction).to have_key "invoice_id"
-    expect(transaction).to have_key "created_at"
-    expect(transaction).to have_key "updated_at"
   end
   
-  it "returns a single merchant" do
+  it "returns a single transaction" do
     create_list(:transaction, 3)
 
     get "/api/v1/transactions/2"
@@ -29,7 +26,6 @@ describe "Transactions API" do
     expected_card_number = Transaction.find(2).credit_card_number
 
     expect(response).to be_success
-    expect(transaction).to have_key "id"
     expect(transaction).to have_key "credit_card_number"
     expect(transaction["credit_card_number"]).to eq expected_card_number
     expect(transaction).to have_key "result"
