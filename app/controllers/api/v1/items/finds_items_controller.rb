@@ -20,6 +20,4 @@ class Api::V1::Items::FindsItemsController < ApplicationController
     item_params
   end
 
-
-
 end
