@@ -40,9 +40,10 @@ describe "Top Items by Revenue API" do
 
   end
 
-  it "returns the top 3 items ranked by total revenue generated" do
+  xit "returns the top 2 items ranked by total revenue generated" do
     get "/api/v1/items/most_revenue?quantity=2"
     items_json = JSON.parse(response.body)
+    byebug
 
     expect(items_json.length).to eql(2)
     expect(items_json[0]["id"]).to eql(@coolest_item.id)
