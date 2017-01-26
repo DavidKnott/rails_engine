@@ -18,7 +18,7 @@ describe "Finds Invoice Items API" do
     invoice_item_json = JSON.parse(response.body)
 
     expect(invoice_item_json["quantity"]).to eql(5)
-    expect(invoice_item_json["unit_price"]).to eql(87)
+    expect(invoice_item_json["unit_price"]).to eql("0.87")
   end
 
   it "returns the first invoice with a given quantity parameter" do
@@ -26,7 +26,7 @@ describe "Finds Invoice Items API" do
     invoice_item_json = JSON.parse(response.body)
 
     expect(invoice_item_json["quantity"]).to eql(5)
-    expect(invoice_item_json["unit_price"]).to eql(87)
+    expect(invoice_item_json["unit_price"]).to eql("0.87")
   end
 
   it "returns the first invoice with a given unit_price parameter" do
@@ -34,7 +34,7 @@ describe "Finds Invoice Items API" do
     invoice_item_json = JSON.parse(response.body)
 
     expect(invoice_item_json["quantity"]).to eql(5)
-    expect(invoice_item_json["unit_price"]).to eql(87)
+    expect(invoice_item_json["unit_price"]).to eql("0.87")
   end
 
   xit "returns the first invoice with a given created_at parameter" do
@@ -43,7 +43,7 @@ describe "Finds Invoice Items API" do
 
     expect(invoice_item_json["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json["quantity"]).to eql(5)
-    expect(invoice_item_json["unit_price"]).to eql(87)
+    expect(invoice_item_json["unit_price"]).to eql("0.87")
   end
 
   xit "returns the first invoice with a given updated_at parameter" do
@@ -52,7 +52,7 @@ describe "Finds Invoice Items API" do
 
     expect(invoice_item_json["id"]).to eql(@invoice_item_1.id)
     expect(invoice_item_json["quantity"]).to eql(5)
-    expect(invoice_item_json["unit_price"]).to eql(87)
+    expect(invoice_item_json["unit_price"]).to eql("0.87")
   end
 
   it "returns an array with the correct invoice_item given an id parameter" do
@@ -60,7 +60,7 @@ describe "Finds Invoice Items API" do
     invoice_item_json = JSON.parse(response.body)
 
     expect(invoice_item_json[0]["quantity"]).to eql(5)
-    expect(invoice_item_json[0]["unit_price"]).to eql(87)
+    expect(invoice_item_json[0]["unit_price"]).to eql("0.87")
   end
 
   it "returns all invoice_items with a specified quantity" do
@@ -70,7 +70,7 @@ describe "Finds Invoice Items API" do
     expect(invoice_item_json.length).to eql(2)
     2.times do |i|
       expect(invoice_item_json[i]["quantity"]).to eql(5)
-      expect(invoice_item_json[i]["unit_price"]).to eql(87)
+      expect(invoice_item_json[i]["unit_price"]).to eql("0.87")
     end
   end
 
@@ -81,7 +81,7 @@ describe "Finds Invoice Items API" do
     expect(invoice_item_json.length).to eql(2)
     2.times do |i|
       expect(invoice_item_json[i]["quantity"]).to eql(5)
-      expect(invoice_item_json[i]["unit_price"]).to eql(87)
+      expect(invoice_item_json[i]["unit_price"]).to eql("0.87")
     end
   end
 
@@ -92,7 +92,7 @@ describe "Finds Invoice Items API" do
     expect(invoice_item_json.length).to eql(2)
     2.times do |i|
       expect(invoice_item_json[i]["quantity"]).to eql(5)
-      expect(invoice_item_json[i]["unit_price"]).to eql(87)
+      expect(invoice_item_json[i]["unit_price"]).to eql("0.87")
     end
   end
 
@@ -103,7 +103,7 @@ describe "Finds Invoice Items API" do
     expect(invoice_item_json.length).to eql(2)
     2.times do |i|
       expect(invoice_item_json[i]["quantity"]).to eql(5)
-      expect(invoice_item_json[i]["unit_price"]).to eql(87)
+      expect(invoice_item_json[i]["unit_price"]).to eql("0.87")
     end
   end
 end

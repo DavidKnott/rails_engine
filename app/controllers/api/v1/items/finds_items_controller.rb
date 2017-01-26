@@ -6,13 +6,13 @@ class Api::V1::Items::FindsItemsController < ApplicationController
 
   def show
     adjusted_item_params = dollars_to_cents
-    render json: Item.find_by(adjusted_item_params)
+    render json: Item.where(adjusted_item_params)
   end
 
   private
 
   def item_params
-    params.permit(:name, :description, :unit_price, :created_at, :updated_at)
+    params.permit(:id, :name, :description, :unit_price, :created_at, :updated_at, :merchant_id)
   end
 
   def dollars_to_cents
