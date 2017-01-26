@@ -51,7 +51,7 @@ describe "Finds Items API" do
   end
 
   it "returns the correct item given a unit_price parameter" do
-    get "/api/v1/items/find?unit_price=100"
+    get "/api/v1/items/find?unit_price=1.00"
     item_json = JSON.parse(response.body)
 
     expect(item_json["id"]).to eql(@item_1.id)

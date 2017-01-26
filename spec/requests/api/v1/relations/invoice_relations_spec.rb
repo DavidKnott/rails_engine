@@ -71,10 +71,10 @@ describe "Invoice Relations API" do
     expect(the_invoices_items_json.count).to eql(2)
     expect(the_invoices_items_json[0]["name"]).to eql("Cool Tshirt")
     expect(the_invoices_items_json[0]["description"]).to eql("The coolest tshirt ever")
-    expect(the_invoices_items_json[0]["unit_price"]).to eql(1000)
+    expect(the_invoices_items_json[0]["unit_price"]).to eql("10.00")
     expect(the_invoices_items_json[1]["name"]).to eql("Pretty Cool Tshirt")
     expect(the_invoices_items_json[1]["description"]).to eql("The second coolest tshirt ever")
-    expect(the_invoices_items_json[1]["unit_price"]).to eql(900)
+    expect(the_invoices_items_json[1]["unit_price"]).to eql("9.00")
   end
 
   it "returns the associated customer" do
