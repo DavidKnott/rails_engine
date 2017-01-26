@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :merchants, only: [:index, :show] do
         resources :items, only: [:index], :controller => "merchants/merchant_items"
         resources :invoices, only: [:index], :controller => "merchants/merchant_invoices"
+        resource :revenue, only: [:show], :controller => "merchants/merchant_revenue"
       end
       namespace :customers do
         get "/random", to: "random_customers#show"
