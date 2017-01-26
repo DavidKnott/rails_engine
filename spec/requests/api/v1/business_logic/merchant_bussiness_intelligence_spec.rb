@@ -26,18 +26,20 @@ describe "Merchant Bussiness Intelligence" do
   end
 
   it "returns list of the merchants with the most items sold" do
-    merchants = create_list(:merchant, 20)
+    merchants = create_list(:merchant, 10)
     merchants.each do |merchant|
       merchant.items << create(:item)
       merchant.items.each do |item|
-        item.invoice_items.create(item_id: item.id, invoice_id: @invoice.id, unit_price:100, quantity:2)
+        invoice = create(:invoice, merchant_id: merchant.id)
+        transaction = create(:transaction, invoice_id: invoice.id)
+        item.invoice_items.create(item_id: item.id, invoice_id: invoice.id, unit_price:100, quantity:2)
       end
     end
 
     get '/api/v1/merchants/most_items?quantity=3'
 
     merchants_json = JSON.parse(response.body)
-    merchant_json = Merchant.find(merchants_json.first.id)
+    merchant_json = Merchant.find(merchants_json.last["id"])
 
     expect(merchants_json.count).to eq 3
     expect(merchant_json.items.count).to eq 1

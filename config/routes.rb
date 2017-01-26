@@ -5,6 +5,7 @@ Rails.application.routes.draw do
         get "/random", to: "random_merchants#show"
         get "/find", to: "finds_merchants#show"
         get "/find_all", to: "finds_merchants#index"
+        get "/most_items", to: "most_items#index"
       end
       resources :merchants, only: [:index, :show] do
         resources :items, only: [:index], :controller => "merchants/merchant_items"
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
         get "/random", to: "random_customers#show"
         get "/find", to: "finds_customers#show"
         get "/find_all", to: "finds_customers#index"
+        get "/:customer_id/favorite_merchant", to: "favorite_merchant#show"
       end
       resources :customers, only: [:index, :show] do
         resources :invoices, only: [:index], :controller => "customers/customer_invoices"
