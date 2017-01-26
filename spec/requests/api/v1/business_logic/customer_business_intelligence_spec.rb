@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Customer Bussiness Intelligence" do
+describe "Customer Business Intelligence" do
   it "returns a merchant where the given customer has the most successful transacions" do
     merchant = create_list(:merchant_with_invoices, 1, invoices_count: 1).first
     customer = create(:customer)

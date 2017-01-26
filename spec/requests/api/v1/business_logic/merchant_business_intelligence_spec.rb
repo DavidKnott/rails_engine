@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Merchant Bussiness Intelligence" do
+describe "Merchant Business Intelligence" do
   before(:each) do
     @time = "2012-03-27T14:54:05.000Z"
     @merchant = create_list(:merchant_with_invoices, 1, invoices_count: 1).first
