@@ -15,7 +15,7 @@ FactoryGirl.define do
       end
     end
 
-    factory :merchants_with_invoices do
+    factory :merchant_with_invoices do
       after(:create) do |merchant, evaluator|
         create_list(:invoice, evaluator.invoices_count, merchant: merchant)
       end
