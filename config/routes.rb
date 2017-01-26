@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         get "/find_all", to: "finds_merchants#index"
         get "/most_items", to: "most_items#index"
         get "/:merchant_id/customers_with_pending_invoices", to: "customers_with_pending_invoices#index"
+        get "/most_revenue", to: "top_merchants_by_revenue#index"
       end
       resources :merchants, only: [:index, :show] do
         resources :items, only: [:index], :controller => "merchants/merchant_items"
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
         get "/find", to: "finds_items#show"
         get "/find_all", to: "finds_items#index"
         get "/most_items", to: "most_items#index"
+        get "/most_revenue", to: "top_items_by_revenue#index"
       end
       resources :items, only: [:index, :show] do
         resources :invoice_items, only: [:index], :controller => "items/item_invoice_items"

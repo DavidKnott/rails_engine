@@ -19,5 +19,16 @@ class Merchant < ApplicationRecord
   def self.favorite(customer_id)
     Merchant.joins(:invoices).joins(invoices: [:transactions, :customer]).where(transactions: {result: "success"}, customers: {id: customer_id}).group(:id).select('merchants.id, merchants.name, COUNT(transactions) as co').order('co desc').first
   end
+  
+  def self.most_revenue(top_x)
+    Merchant.unscoped
+    .joins(:invoices)
+    .joins(invoices: [:transactions])
+      .where(transactions: {result: "success"})
+    .joins(invoices: [:invoice_items])
+    .group(:id)
+    .select('merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) as total_revenue')
+    .reorder('total_revenue DESC')
+    .limit(top_x)
+  end
 end
-
