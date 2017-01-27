@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/customer_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/customer_spec.rb": [
         1,
         null,
         1,
@@ -15,7 +15,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/rails_helper.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -82,14 +82,14 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/environment.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/application.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/application.rb": [
         1,
         null,
         1,
@@ -121,12 +121,12 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/boot.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/environments/test.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/environments/test.rb": [
         1,
         null,
         null,
@@ -170,7 +170,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/application_controller_renderer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -178,25 +178,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/cors.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -205,13 +187,31 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/cors.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/inflections.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -229,13 +229,13 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/mime_types.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/new_framework_defaults.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/new_framework_defaults.rb": [
         null,
         null,
         null,
@@ -255,7 +255,7 @@
         null,
         1
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/initializers/wrap_parameters.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -271,7 +271,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/customers.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/customers.rb": [
         1,
         1,
         1,
@@ -296,7 +296,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/invoice_items.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/invoice_items.rb": [
         1,
         1,
         1,
@@ -306,7 +306,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/invoices.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/invoices.rb": [
         1,
         1,
         1,
@@ -336,7 +336,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/items.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/items.rb": [
         1,
         1,
         1,
@@ -356,7 +356,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/merchants.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/merchants.rb": [
         1,
         1,
         1,
@@ -383,7 +383,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/factories/transactions.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/factories/transactions.rb": [
         1,
         1,
         1,
@@ -394,7 +394,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/config/routes.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/config/routes.rb": [
         1,
         1,
         1,
@@ -471,7 +471,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/support/factory_girl.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/support/factory_girl.rb": [
         1,
         null,
         1,
@@ -497,13 +497,17 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/customer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/customer.rb": [
         1,
         1,
         1,
         1,
         null,
         1,
+        null,
+        null,
+        1,
+        null,
         1,
         null,
         null,
@@ -517,7 +521,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/application_record.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/application_record.rb": [
         1,
         1,
         null,
@@ -526,7 +530,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/invoice_item_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/invoice_item_spec.rb": [
         1,
         null,
         1,
@@ -587,7 +591,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/invoice_item.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/invoice_item.rb": [
         1,
         1,
         1,
@@ -598,7 +602,7 @@
         1,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/invoice_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/invoice_spec.rb": [
         1,
         null,
         1,
@@ -636,7 +640,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/invoice.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/invoice.rb": [
         1,
         1,
         1,
@@ -644,157 +648,24 @@
         1,
         1,
         1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/item_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        2,
-        null,
-        null,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/merchant_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/item_spec.rb": [
         1,
         null,
         1,
         1,
         2,
-        null,
-        null,
-        1,
         2,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/merchant.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
         2,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
         2,
         null,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
         1,
         null,
         null,
@@ -803,24 +674,87 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null,
+        1,
         null,
         null,
-        null,
-        null,
+        1,
+        2,
+        2,
         2,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/models/transaction_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/item.rb": [
+        1,
+        1,
+        1,
+        1,
         1,
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         2,
-        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/merchant_spec.rb": [
+        1,
+        null,
+        1,
+        1,
         2,
         null,
         null,
@@ -829,32 +763,27 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/models/transaction.rb": [
-        1,
-        1,
-        1,
-        null,
-        235,
-        3,
-        null,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/all_merchants_revenue_on_date_spec.rb": [
-        1,
-        null,
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/merchant.rb": [
         1,
         1,
         1,
         1,
         null,
+        1,
+        2,
+        1,
+        null,
         null,
         1,
         null,
-        1,
+        null,
+        null,
+        null,
+        2,
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -865,22 +794,12 @@
         1,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null,
         null,
         null,
         1,
         null,
-        1,
-        null,
-        1,
         null,
         1,
         null,
@@ -892,87 +811,75 @@
         1,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
         null,
         null,
         null,
         null,
-        1,
-        1,
-        1,
         null,
-        1,
+        2,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/customer_business_intelligence_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/models/transaction_spec.rb": [
         1,
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
+        null,
         null,
         1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
+        2,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/item_business_intelligence_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/models/transaction.rb": [
+        1,
+        1,
+        1,
+        null,
+        239,
+        7,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/all_merchants_revenue_on_date_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
         1,
         null,
         1,
-        1,
-        null,
-        1,
-        1,
-        1,
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
         1,
+        null,
+        null,
         1,
+        null,
+        null,
         1,
+        null,
+        null,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
+        null,
+        null,
         1,
         null,
         1,
@@ -980,24 +887,111 @@
         1,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/merchant_business_intelligence_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/customer_business_intelligence_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
         1,
         null,
         1,
         1,
         null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/item_business_intelligence_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
+        1,
         null,
+        1,
         null,
+        1,
+        1,
         null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/merchant_business_intelligence_spec.rb": [
+        1,
+        null,
+        1,
         null,
         1,
         4,
@@ -1068,7 +1062,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/top_customer_for_merchant_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/top_customer_for_merchant_spec.rb": [
         1,
         null,
         1,
@@ -1128,7 +1122,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/top_items_by_revenue_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/top_items_by_revenue_spec.rb": [
         1,
         null,
         1,
@@ -1192,7 +1186,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/business_logic/top_merchants_by_revenue_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/business_logic/top_merchants_by_revenue_spec.rb": [
         1,
         null,
         1,
@@ -1267,7 +1261,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/customers_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/customers_spec.rb": [
         1,
         null,
         1,
@@ -1303,7 +1297,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_customers_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_customers_spec.rb": [
         1,
         null,
         1,
@@ -1342,7 +1336,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_invoice_items_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_invoice_items_spec.rb": [
         1,
         null,
         1,
@@ -1458,7 +1452,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_invoices_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_invoices_spec.rb": [
         1,
         null,
         1,
@@ -1552,7 +1546,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_items_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_items_spec.rb": [
         1,
         null,
         1,
@@ -1700,7 +1694,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_merchants_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_merchants_spec.rb": [
         1,
         null,
         1,
@@ -1737,7 +1731,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/finds/finds_transactions_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/finds/finds_transactions_spec.rb": [
         1,
         null,
         1,
@@ -1775,7 +1769,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/invoice_items_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/invoice_items_spec.rb": [
         1,
         null,
         1,
@@ -1816,7 +1810,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/invoices_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/invoices_spec.rb": [
         1,
         null,
         1,
@@ -1853,7 +1847,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/items_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/items_spec.rb": [
         1,
         null,
         1,
@@ -1885,7 +1879,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/merchants_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/merchants_spec.rb": [
         1,
         null,
         1,
@@ -1920,7 +1914,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_customer_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_customer_spec.rb": [
         1,
         null,
         1,
@@ -1938,34 +1932,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_invoice_item_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_invoice_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_invoice_item_spec.rb": [
         1,
         null,
         1,
@@ -1992,7 +1959,34 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_item_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_invoice_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_item_spec.rb": [
         1,
         null,
         1,
@@ -2020,7 +2014,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_merchant_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_merchant_spec.rb": [
         1,
         null,
         1,
@@ -2038,7 +2032,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/randoms/random_transaction_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/randoms/random_transaction_spec.rb": [
         1,
         null,
         1,
@@ -2056,7 +2050,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/customer_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/customer_relations_spec.rb": [
         1,
         null,
         1,
@@ -2094,7 +2088,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/invoice_item_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/invoice_item_relations_spec.rb": [
         1,
         null,
         1,
@@ -2137,24 +2131,10 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/invoice_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/invoice_relations_spec.rb": [
         1,
         null,
         1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -2222,7 +2202,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/item_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/item_relations_spec.rb": [
         1,
         null,
         1,
@@ -2254,7 +2234,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/merchant_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/merchant_relations_spec.rb": [
         1,
         null,
         1,
@@ -2289,7 +2269,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/relations/transaction_relations_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/relations/transaction_relations_spec.rb": [
         1,
         null,
         1,
@@ -2310,7 +2290,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/spec/requests/api/v1/transactions_spec.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/spec/requests/api/v1/transactions_spec.rb": [
         1,
         null,
         1,
@@ -2346,7 +2326,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/all_merchants_revenue_on_date_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/all_merchants_revenue_on_date_controller.rb": [
         1,
         1,
         1,
@@ -2354,7 +2334,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/application_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/application_controller.rb": [
         1,
         1,
         21,
@@ -2362,7 +2342,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/total_revenue_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/total_revenue_serializer.rb": [
         1,
         1,
         null,
@@ -2375,26 +2355,26 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers/favorite_merchant_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/merchant_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/merchant_serializer.rb": [
         1,
         1,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/most_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/most_items_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/item_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/item_serializer.rb": [
         1,
         1,
         null,
@@ -2407,14 +2387,14 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/best_day_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/best_day_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/best_day_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/best_day_serializer.rb": [
         1,
         1,
         null,
@@ -2423,7 +2403,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/merchant_revenue_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/merchant_revenue_controller.rb": [
         1,
         null,
         1,
@@ -2432,7 +2412,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/revenue_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/revenue_serializer.rb": [
         1,
         1,
         null,
@@ -2445,7 +2425,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/most_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/most_items_controller.rb": [
         1,
         1,
         1,
@@ -2453,19 +2433,19 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/customers_with_pending_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/customers_with_pending_invoices_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/customer_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/customer_serializer.rb": [
         1,
         1,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/top_customer_for_merchant_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/top_customer_for_merchant_controller.rb": [
         1,
         null,
         1,
@@ -2474,20 +2454,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/top_items_by_revenue_controller.rb": [
-        1,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        1,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/top_merchants_by_revenue_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/top_items_by_revenue_controller.rb": [
         1,
         1,
         2,
@@ -2500,7 +2467,20 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/top_merchants_by_revenue_controller.rb": [
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        1,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers_controller.rb": [
         1,
         1,
         1,
@@ -2511,7 +2491,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers/finds_customers_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers/finds_customers_controller.rb": [
         1,
         null,
         1,
@@ -2529,7 +2509,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoice_items/finds_invoice_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoice_items/finds_invoice_items_controller.rb": [
         1,
         null,
         1,
@@ -2549,7 +2529,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/invoice_item_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/invoice_item_serializer.rb": [
         1,
         1,
         null,
@@ -2563,7 +2543,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/finds_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/finds_invoices_controller.rb": [
         1,
         null,
         1,
@@ -2582,12 +2562,12 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/invoice_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/invoice_serializer.rb": [
         1,
         1,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/finds_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/finds_items_controller.rb": [
         1,
         null,
         1,
@@ -2607,7 +2587,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/finds_merchants_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/finds_merchants_controller.rb": [
         1,
         null,
         1,
@@ -2625,7 +2605,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/transactions/finds_transactions_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/transactions/finds_transactions_controller.rb": [
         1,
         null,
         1,
@@ -2643,25 +2623,12 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/serializers/transaction_serializer.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/serializers/transaction_serializer.rb": [
         1,
         1,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoice_items_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoice_items_controller.rb": [
         1,
         null,
         1,
@@ -2674,7 +2641,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices_controller.rb": [
         1,
         null,
         1,
@@ -2687,7 +2654,20 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants_controller.rb": [
         1,
         null,
         1,
@@ -2699,35 +2679,35 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers/random_customers_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers/random_customers_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoice_items/random_invoice_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoice_items/random_invoice_items_controller.rb": [
         1,
         1,
         4,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/random_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/random_invoices_controller.rb": [
         1,
         1,
         4,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/random_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/random_items_controller.rb": [
         1,
         1,
         4,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/random_merchants_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/random_merchants_controller.rb": [
         1,
         null,
         1,
@@ -2735,38 +2715,28 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/transactions/random_transactions_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/transactions/random_transactions_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers/customer_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers/customer_invoices_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/customers/customer_transactions_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/customers/customer_transactions_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoice_items/invoice_item_invoice_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoice_items/invoice_item_item_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoice_items/invoice_item_invoice_controller.rb": [
         1,
         null,
         1,
@@ -2776,7 +2746,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/invoice_transactions_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoice_items/invoice_item_item_controller.rb": [
         1,
         null,
         1,
@@ -2786,7 +2756,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/invoice_invoice_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/invoice_transactions_controller.rb": [
         1,
         null,
         1,
@@ -2796,7 +2766,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/invoice_items_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/invoice_invoice_items_controller.rb": [
         1,
         null,
         1,
@@ -2806,7 +2776,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/invoice_customer_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/invoice_items_controller.rb": [
         1,
         null,
         1,
@@ -2816,7 +2786,7 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/invoices/invoice_merchant_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/invoice_customer_controller.rb": [
         1,
         null,
         1,
@@ -2826,21 +2796,9 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/item_invoice_items_controller.rb": [
-        1,
-        1,
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/invoices/invoice_merchant_controller.rb": [
         1,
         null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/items/item_merchants_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/merchant_items_controller.rb": [
         1,
         1,
         1,
@@ -2848,21 +2806,43 @@
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/merchants/merchant_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/item_invoice_items_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/transactions/transaction_invoices_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/items/item_merchants_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Knott/Turing/module3/projects/rails_engine/app/controllers/api/v1/transactions_controller.rb": [
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/merchant_items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/merchants/merchant_invoices_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/transactions/transaction_invoices_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Knott/Turing/module3/practice/rails_engine/app/controllers/api/v1/transactions_controller.rb": [
         1,
         null,
         1,
@@ -2876,6 +2856,6 @@
         null
       ]
     },
-    "timestamp": 1485499028
+    "timestamp": 1485532320
   }
 }

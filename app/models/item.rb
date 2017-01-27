@@ -19,7 +19,7 @@ class Item < ApplicationRecord
   def self.most_revenue(top_x)
     Item.joins(:invoice_items, :invoices)
     .joins(invoices: [:transactions])
-      .where(transactions: {result: "success"})
+      .merge(Transaction.success)
     .group(:id)
     .select('items.*, SUM(invoice_items.quantity * invoice_items.unit_price) as total_revenue')
     .reorder('total_revenue DESC')
@@ -27,6 +27,10 @@ class Item < ApplicationRecord
   end
 
   def best_day
-    self.invoices.joins(:transactions, :invoice_items).where(transactions: {result: 'success'}).group('invoices.created_at').select('invoices.created_at, sum(invoice_items.quantity) as quant').order('quant desc').first.created_at
+    self.invoices.joins(:transactions, :invoice_items)
+    .where(transactions: {result: "success"})
+    .group('invoices.created_at')
+    .select('invoices.created_at, sum(invoice_items.quantity) as quant')
+    .order('quant desc').first.created_at
   end
 end

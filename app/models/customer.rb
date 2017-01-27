@@ -4,7 +4,11 @@ class Customer < ApplicationRecord
   has_many :transactions, through: :invoices
 
   def self.pending_invoices(merchant_id)
-    Customer.joins(:invoices, :transactions).where(invoices: {merchant_id: merchant_id}).group(:id).where('customers.id NOT IN (?)', (Customer.joins(:invoices).joins(invoices: [:transactions]).where(invoices: {merchant_id: merchant_id}).group(:id).where(transactions: {result: ["success"]}).select('customers.id')))
+    Customer.joins(:invoices, :transactions)
+    .where(invoices: {merchant_id: merchant_id})
+    .group(:id).where('customers.id NOT IN (?)', (Customer.joins(:invoices)
+    .joins(invoices: [:transactions]).where(invoices: {merchant_id: merchant_id})
+    .group(:id).where(transactions: {result: "success"}).select('customers.id')))
   end
 
   def self.most_successful_transactions(merchant_id)

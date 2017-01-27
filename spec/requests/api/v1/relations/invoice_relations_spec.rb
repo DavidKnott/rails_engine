@@ -1,20 +1,6 @@
 require "rails_helper"
 
 describe "Invoice Relations API" do
-  before do
-    # @merchant_1 = create(:merchants_with_invoices)
-    # @invoice1 = @merchant_1.invoices.first
-    # @customer_1 = create(:customer_with_invoices)
-    # @invoice_1 = @customer_1.invoices.create!(status: "limbo")
-
-    #create an invoice_item for each item, assign them to the first invoice
-    
-    # invoice_item_2 = @item_2.invoice_items.create!(invoice: @invoice_1,
-    #                                                 quantity: 4,
-    #                                                 unit_price: 900)
-    # create(:invoice_item)
-  end
-
   it "returns a collection of associated transactions" do
     invoice = create(:invoice)
     invoice.transactions.create!(credit_card_number: "1111222233334444",
