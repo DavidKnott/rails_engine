@@ -71,6 +71,7 @@ rails s
   - All revenues are reported as a float with two decimal places, but prices are stored as integers.
   
 
+
 ## How to Run the Test Suite
 Run rspec from the command line:
 ```
