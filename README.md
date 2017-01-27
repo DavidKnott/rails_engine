@@ -23,6 +23,7 @@ Run these commands in this order:
 ```
 git clone https://github.com/DavidKnott/rails_engine.git
 cd rails_engine
+bundle
 rails db:create
 rails db:migrate
 rails db:seed
