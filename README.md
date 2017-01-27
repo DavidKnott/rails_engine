@@ -1,6 +1,12 @@
 # <a name="top"></a> README
 
-## Overview of Rails Engine API
+## Outline
+  1. [Overview of Rails Engine API](#overview)
+  2. [Setup Instructions](#setup)
+  3. [Deployment Instructions](#deploy)
+  4. [How to Run the Test Suite](#test)
+
+## <a name="overview"></a> Overview of Rails Engine API
 Rails Engine utilizes a multi-merchant sales dataset, including data on merchants, customers, items, invoices, and transactions. The project includes a 6-table postgresql database built in Ruby on Rails 5. The API provides many relationship and business intelligence queries accessible via the available routes ([See Available Routes](#routes)).
 
 ### Database Diagram
@@ -12,7 +18,7 @@ Rails Engine utilizes a multi-merchant sales dataset, including data on merchant
   - All endpoints will return JSON data
   - All endpoints are exposed under an api and version (v1) namespace (e.g. /api/v1/merchants.json)
 
-## Setup Instructions
+## <a name="setup"></a> Setup Instructions
 Run these commands in this order:
 ```
 git clone XXX
@@ -23,7 +29,7 @@ rails db:seed
 rails db:test:prepare
 ```
 
-## Deployment Instructions
+## <a name="deploy"></a> Deployment Instructions
 To launch the project on local host, start up the rails server and visit any of the routes listed below.
 ```
 rails s
@@ -75,7 +81,7 @@ rails s
   - All revenues are reported as a float with two decimal places, but prices are stored as integers.
   
 
-## How to Run the Test Suite
+## <a name="test"></a> How to Run the Test Suite
 Run rspec from the command line:
 ```
 rspec
