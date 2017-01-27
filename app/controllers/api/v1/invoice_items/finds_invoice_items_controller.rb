@@ -1,7 +1,8 @@
 class Api::V1::InvoiceItems::FindsInvoiceItemsController < ApplicationController
 
   def index
-    render json: InvoiceItem.where(invoice_item_params)
+    adjusted_item_params = dollars_to_cents
+    render json: InvoiceItem.where(adjusted_item_params)
   end
 
   def show
@@ -16,7 +17,9 @@ class Api::V1::InvoiceItems::FindsInvoiceItemsController < ApplicationController
   end
 
   def dollars_to_cents
-    return {"unit_price" => (invoice_item_params["unit_price"].to_f * 100).round(0)} if invoice_item_params["unit_price"]
+    if invoice_item_params["unit_price"]
+      return {"unit_price" => (invoice_item_params["unit_price"].to_f * 100).round(0)}
+    end
     invoice_item_params
   end
 
