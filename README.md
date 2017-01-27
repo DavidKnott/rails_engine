@@ -1,6 +1,7 @@
 # README
 
 ## Overview of Rails Engine API
+Rails Engine utilizes a multi-merchant sales dataset, including data on merchants, customers, items, invoices, and transactions. The project includes a 6-table postgresql database built in Ruby on Rails 5. The API provides many relationship and business intelligence queries accessible via the available routes [See Available Routes](#routes).
 
 ### Database Diagram
 
@@ -24,7 +25,7 @@ To launch the project on local host, start up the rails server and visit any of 
 ```
 rails s
 ```
-### API Routes Available
+### <a name="routes"></a> API Routes Available
 
 ####Merchants
   - **/api/v1/merchants/:id/items** - returns a collection of items associated with that merchant
@@ -70,7 +71,6 @@ rails s
   - Failed charges are never counted in revenue totals or statistics.
   - All revenues are reported as a float with two decimal places, but prices are stored as integers.
   
-
 
 ## How to Run the Test Suite
 Run rspec from the command line:
