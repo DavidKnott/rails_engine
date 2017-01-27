@@ -1,17 +1,7 @@
 require 'rails_helper'
 
 describe "Merchant Business Intelligence" do
-  before do
-    #create some customers
-       #create an invoice for those customers
-       #create a failing transaction for that invoice
-       #create another invoice for those customers
-       #create a successful transaction for that invoice
-    #create some more customers
-      #create an invoice for those customers
-      #create a successful transaction for that invoice
-  end
-  
+
   before(:each) do
     @time = "2012-03-27T14:54:05.000Z"
     @merchant = create_list(:merchant_with_invoices, 1, invoices_count: 1).first
