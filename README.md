@@ -76,7 +76,7 @@ rails s
   - **/api/v1/transactions/:id/invoice** returns the associated invoice
 
 ####Important Notes
-  - The dates provided match the format of a standard ActiveRecord timestamp.
+  - The dates provided match the format of a standard ActiveRecord timestamp (e.g. 2012-03-22T03:55:09.000Z).
   - Failed charges are never counted in revenue totals or statistics.
   - All revenues are reported as a float with two decimal places, but prices are stored as integers.
   
