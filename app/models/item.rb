@@ -8,11 +8,8 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
 
-  default_scope { order(:id)}
-
-
   def self.most_items(number_of_items)
-    Item.unscoped.joins(:invoice_items, :invoices).
+    Item.joins(:invoice_items, :invoices).
     joins(invoices: [:transactions]).
     where(transactions: {result:"success"}).
     group(:id).
@@ -20,8 +17,7 @@ class Item < ApplicationRecord
   end
   
   def self.most_revenue(top_x)
-    Item.unscoped
-    .joins(:invoice_items, :invoices)
+    Item.joins(:invoice_items, :invoices)
     .joins(invoices: [:transactions])
       .where(transactions: {result: "success"})
     .group(:id)

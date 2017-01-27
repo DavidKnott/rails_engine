@@ -21,8 +21,7 @@ class Merchant < ApplicationRecord
   end
   
   def self.most_revenue(top_x)
-    Merchant.unscoped
-    .joins(:invoices)
+    Merchant.joins(:invoices)
     .joins(invoices: [:transactions])
       .where(transactions: {result: "success"})
     .joins(invoices: [:invoice_items])

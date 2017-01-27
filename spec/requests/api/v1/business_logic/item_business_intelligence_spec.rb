@@ -22,9 +22,5 @@ describe "Item Business Intelligence" do
     expect(response).to be_success
     expect(items.count).to eq 3
     expect(item_json["id"]).to eq 1
-
-    # Item
-    # # Item.unscoped.joins(:invoice_items, :invoices).joins(invoices: [:transactions]).where(transactions: {result:"success"}).group(:id).select("items.id, SUM(invoice_items.quantity) as quant").order("quant desc").limit(3)
-    # # GET /api/v1/items/most_items?quantity=x 
   end
 end
