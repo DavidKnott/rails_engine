@@ -18,12 +18,7 @@ describe "Merchant Relations API" do
   end
 
   it "returns all invoices for a given merchant" do
-    # merchant = create_list(:merchant_with_items, 3, items_count: 3).first
-    # invoices = create_list(:invoice, 4)
-    # item = merchant.items.first
-    # merchant.items.first.invoice_items.create(invoice_id: invoices.first.id, item_id: item.id, quantity: 2, unit_price: 10)
-    # merchant.items.first.invoice_items.create(invoice_id: invoices.last.id, item_id: item.id, quantity: 2, unit_price: 10)
-    merchant = create_list(:merchants_with_invoices, 3, invoices_count: 2).first
+    merchant = create_list(:merchant_with_invoices, 3, invoices_count: 2).first
     
     get "/api/v1/merchants/#{merchant.id}/invoices"
 

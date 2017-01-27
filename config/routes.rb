@@ -5,16 +5,20 @@ Rails.application.routes.draw do
         get "/random", to: "random_merchants#show"
         get "/find", to: "finds_merchants#show"
         get "/find_all", to: "finds_merchants#index"
+        get "/most_items", to: "most_items#index"
+        get "/:merchant_id/customers_with_pending_invoices", to: "customers_with_pending_invoices#index"
         get "/most_revenue", to: "top_merchants_by_revenue#index"
       end
       resources :merchants, only: [:index, :show] do
         resources :items, only: [:index], :controller => "merchants/merchant_items"
         resources :invoices, only: [:index], :controller => "merchants/merchant_invoices"
+        resource :revenue, only: [:show], :controller => "merchants/merchant_revenue"
       end
       namespace :customers do
         get "/random", to: "random_customers#show"
         get "/find", to: "finds_customers#show"
         get "/find_all", to: "finds_customers#index"
+        get "/:customer_id/favorite_merchant", to: "favorite_merchant#show"
       end
       resources :customers, only: [:index, :show] do
         resources :invoices, only: [:index], :controller => "customers/customer_invoices"
@@ -24,6 +28,7 @@ Rails.application.routes.draw do
         get "/random", to: "random_items#show"
         get "/find", to: "finds_items#show"
         get "/find_all", to: "finds_items#index"
+        get "/most_items", to: "most_items#index"
         get "/most_revenue", to: "top_items_by_revenue#index"
       end
       resources :items, only: [:index, :show] do
