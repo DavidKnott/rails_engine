@@ -38,7 +38,7 @@ rails s
   - **/api/v1/merchants/:id/revenue?date=x** - returns the total revenue for that merchant for a specific invoice date x
   - **/api/v1/merchants/:id/favorite_customer** - returns the customer with the highest count of succesful transactions associated with that merchant
   - **/api/v1/merchants/:id/customers_with_pending_invoices** - returns a collection of customers which have pending invoices.
-      -- NOTE: A pending invoice is defined as an invoice that has no transactions with a result of success. This means all transactions are failed.
+    * NOTE: A pending invoice is defined as an invoice that has no transactions with a result of success. This means all transactions are failed.
   - **/api/v1/merchants/most_revenue?quantity=x** - returns the top x merchants ranked by total revenue
   - **/api/v1/merchants/most_items?quantity=x** returns the top x merchants ranked by total number of items sold
 
