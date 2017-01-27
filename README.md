@@ -4,6 +4,7 @@
 Rails Engine utilizes a multi-merchant sales dataset, including data on merchants, customers, items, invoices, and transactions. The project includes a 6-table postgresql database built in Ruby on Rails 5. The API provides many relationship and business intelligence queries accessible via the available routes ([See Available Routes](#routes)).
 
 ### Database Diagram
+[diagram]: https://github.com/DavidKnott/rails_engine/blob/master/rails_engine_database_diagram.png "Rails Engine Database Diagram"
 
 ### What to Expect
   - All endpoints will return JSON data
