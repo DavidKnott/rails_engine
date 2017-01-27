@@ -76,6 +76,7 @@ describe "Merchant Business Intelligence" do
     customer_json = customers_json.first
 
     expect(response).to be_success
-    expect(customers_json.count).to eq 0
+    expect(customers_json.count).to eq 3
+    expect(customer_json['id']).to eq 6
   end
 end

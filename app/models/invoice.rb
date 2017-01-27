@@ -8,5 +8,6 @@ class Invoice < ApplicationRecord
   has_many :items, through: :invoice_items
   belongs_to :merchant
 
-  default_scope { order(:id)}
+  # default_scope { order(:id)}
 end
+# i.invoices.joins(:transactions, :invoice_items).where(transactions: {result: 'success'}).group('invoices.id, invoices.created_at').select('invoices.created_at').order('sum(invoice_items.quantity), invoices.created_at desc')

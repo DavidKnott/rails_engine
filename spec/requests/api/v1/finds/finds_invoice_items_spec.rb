@@ -80,7 +80,7 @@ describe "Finds Invoice Items API" do
   end
 
   it "returns all invoice items with a specified unit_price" do
-    get "/api/v1/invoice_items/find_all?unit_price=87.00"
+    get "/api/v1/invoice_items/find_all?unit_price=.87"
     invoice_item_json = JSON.parse(response.body)
 
     expect(invoice_item_json.length).to eql(2)
