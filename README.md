@@ -21,7 +21,7 @@ Rails Engine utilizes a multi-merchant sales dataset, including data on merchant
 ## <a name="setup"></a> Setup Instructions
 Run these commands in this order:
 ```
-git clone XXX
+git clone https://github.com/DavidKnott/rails_engine.git
 cd rails_engine
 rails db:create
 rails db:migrate
