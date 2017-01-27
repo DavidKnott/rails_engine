@@ -25,4 +25,8 @@ class Item < ApplicationRecord
     .reorder('total_revenue DESC')
     .limit(top_x)
   end
+
+  def best_day
+    self.invoices.joins(:transactions, :invoice_items).where(transactions: {result: 'success'}).group('invoices.created_at').select('invoices.created_at, sum(invoice_items.quantity) as quant').order('quant desc').first.created_at
+  end
 end
