@@ -1,17 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview of Rails Engine API
 
-Things you may want to cover:
+### Database Diagram
 
-* Ruby version
-* System dependencies
-* Configuration
-* Services (job queues, cache servers, search engines, etc.)
+### What to Expect
+  - All endpoints will return JSON data
+  - All endpoints are exposed under an api and version (v1) namespace (e.g. /api/v1/merchants.json)
 
-
-## Setup instructions
+## Setup Instructions
 Run these commands in this order:
 ```
 git clone XXX
@@ -22,12 +19,12 @@ rails db:seed
 rails db:test:prepare
 ```
 
-## Deployment instructions
+## Deployment Instructions
 To launch the project on local host, start up the rails server and visit any of the routes listed below.
 ```
 rails s
 ```
-### API routes available
+### API Routes Available
 
 ####Merchants
   - **/api/v1/merchants/:id/items** - returns a collection of items associated with that merchant
@@ -74,7 +71,7 @@ rails s
   - All revenues are reported as a float with two decimal places, but prices are stored as integers.
   
 
-## How to run the test suite
+## How to Run the Test Suite
 Run rspec from the command line:
 ```
 rspec
