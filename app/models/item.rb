@@ -8,11 +8,8 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
 
-  default_scope { order(:id)}
-
-
   def self.most_items(number_of_items)
-    Item.unscoped.joins(:invoice_items, :invoices).
+    Item.joins(:invoice_items, :invoices).
     joins(invoices: [:transactions]).
     where(transactions: {result:"success"}).
     group(:id).
@@ -20,13 +17,16 @@ class Item < ApplicationRecord
   end
   
   def self.most_revenue(top_x)
-    Item.unscoped
-    .joins(:invoice_items, :invoices)
+    Item.joins(:invoice_items, :invoices)
     .joins(invoices: [:transactions])
       .where(transactions: {result: "success"})
     .group(:id)
     .select('items.*, SUM(invoice_items.quantity * invoice_items.unit_price) as total_revenue')
     .reorder('total_revenue DESC')
     .limit(top_x)
+  end
+
+  def best_day
+    self.invoices.joins(:transactions, :invoice_items).where(transactions: {result: 'success'}).group('invoices.created_at').select('invoices.created_at, sum(invoice_items.quantity) as quant').order('quant desc').first.created_at
   end
 end

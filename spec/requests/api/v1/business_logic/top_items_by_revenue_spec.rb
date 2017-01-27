@@ -40,24 +40,23 @@ describe "Top Items by Revenue API" do
 
   end
 
-  xit "returns the top 2 items ranked by total revenue generated" do
+  it "returns the top 2 items ranked by total revenue generated" do
     get "/api/v1/items/most_revenue?quantity=2"
     items_json = JSON.parse(response.body)
-    byebug
 
     expect(items_json.length).to eql(2)
-    expect(items_json[0]["id"]).to eql(@coolest_item.id)
-    expect(items_json[0]["name"]).to eql("Coolest Tshirt")
-    expect(items_json[1]["id"]).to eql(@pretty_cool_item.id)
-    expect(items_json[1]["name"]).to eql("Pretty Cool Tshirt")
+    expect(items_json[0]["id"]).to eql(1)
+    expect(items_json[0]["name"]).to eql("Pretty Cool Tshirt")
+    expect(items_json[1]["id"]).to eql(3)
+    expect(items_json[1]["name"]).to eql("Coolest Tshirt")
   end
 
-  xit "returns the top item by total revenue if it's not given a quantity" do
+  it "returns the top item by total revenue if it's not given a quantity" do
     get "/api/v1/items/most_revenue"
     items_json = JSON.parse(response.body)
 
     expect(items_json.length).to eql(1)
-    expect(items_json[0]["id"]).to eql(@coolest_item.id)
-    expect(items_json[0]["name"]).to eql("Coolest Tshirt")
+    expect(items_json[0]["id"]).to eql(1)
+    expect(items_json[0]["name"]).to eql("Pretty Cool Tshirt")
   end
 end

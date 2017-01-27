@@ -22,9 +22,30 @@ describe "Item Business Intelligence" do
     expect(response).to be_success
     expect(items.count).to eq 3
     expect(item_json["id"]).to eq 1
+  end
 
-    # Item
-    # # Item.unscoped.joins(:invoice_items, :invoices).joins(invoices: [:transactions]).where(transactions: {result:"success"}).group(:id).select("items.id, SUM(invoice_items.quantity) as quant").order("quant desc").limit(3)
-    # # GET /api/v1/items/most_items?quantity=x 
+  it "returns they date where a given item had the most sales" do
+    time1 = "2012-03-27T14:54:05.000Z"
+    time2 = "2012-03-26T14:54:05.000Z"
+    time3 = "2012-03-25T14:54:05.000Z"
+    merchant = create_list(:merchant_with_invoices, 1, invoices_count: 1).first
+    customer = create(:customer)
+    invoice1 = merchant.invoices.create(status: "limbo", customer_id: customer.id, created_at: time1)
+    invoice2 = merchant.invoices.create(status: "limbo", customer_id: customer.id, created_at: time2)
+    invoice3 = merchant.invoices.create(status: "limbo", customer_id: customer.id, created_at: time3)
+    create_list(:transaction, 2, result: "success", invoice_id: invoice1.id)
+    create_list(:transaction, 2, result: "success", invoice_id: invoice2.id)
+    create_list(:transaction, 2, result: "success", invoice_id: invoice3.id)
+    items = create_list(:item, 3)
+    create(:invoice_item, item_id: items[0].id, invoice_id: invoice1.id, unit_price:100, quantity:30)
+    create(:invoice_item, item_id: items[0].id, invoice_id: invoice2.id, unit_price:100, quantity:2)
+    create(:invoice_item, item_id: items[1].id, invoice_id: invoice3.id, unit_price:100, quantity:2)
+
+    get "/api/v1/items/#{items[0].id}/best_day"
+
+    best_day = JSON.parse(response.body)
+
+    expect(response).to be_success
+    expect(best_day).to eq({"best_day" => time1})
   end
 end
