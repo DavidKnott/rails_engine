@@ -73,7 +73,7 @@ describe "Invoice Relations API" do
   end
 
   it "returns the associated merchant" do
-    merchant = create(:merchants_with_invoices, name: "Best Store Ever")
+    merchant = create(:merchant_with_invoices, name: "Best Store Ever")
     invoice = merchant.invoices.first
     get "/api/v1/invoices/#{invoice.id}/merchant"
     merchant_json = JSON.parse(response.body)

@@ -10,6 +10,15 @@ class Item < ApplicationRecord
 
   default_scope { order(:id)}
 
+
+  def self.most_items(number_of_items)
+    Item.unscoped.joins(:invoice_items, :invoices).
+    joins(invoices: [:transactions]).
+    where(transactions: {result:"success"}).
+    group(:id).
+    select("items.id, items.name, items.description, items.unit_price, items.merchant_id, SUM(invoice_items.quantity) as quant").order("quant desc").limit(number_of_items)
+  end
+  
   def self.most_revenue(top_x)
     Item.unscoped
     .joins(:invoice_items, :invoices)
