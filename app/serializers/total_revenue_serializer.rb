@@ -1,7 +1,7 @@
-class RevenueSerializer < ActiveModel::Serializer
-  attributes :revenue
+class TotalRevenueSerializer < ActiveModel::Serializer
+  attributes :total_revenue
 
-  def revenue
+  def total_revenue
     cents_to_dollars(object)
   end
 
